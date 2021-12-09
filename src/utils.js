@@ -470,16 +470,16 @@ const getRandomAssistant = () => {
 }
 
 const getRandomTime = () => {
-  let hour;
+  let hour
   while (true) {
-    hour = Math.floor(Math.random() * 24);
+    hour = Math.floor(Math.random() * 24)
     if (hour > 7 && hour < 19) {
-      return hour;
+      return hour
     }
   }
 };
 
-const getRandomDay = () => Math.floor(Math.random() * 20) + 1;
+const getRandomDay = () => Math.floor(Math.random() * 20) + 1
 
 const generateRandomAppointment = () => ({
   day: getRandomDay(),
@@ -487,11 +487,11 @@ const generateRandomAppointment = () => ({
   patient: getRandomClient(),
   dentist: getRandomDentist(),
   assistant: getRandomAssistant(),
-});
+})
 
 const generateRandomAppointments = num =>
   Array(num)
     .fill(0)
-    .map(_ => generateRandomAppointment());
+    .map(_ => generateRandomAppointment())
 
-export default generateRandomAppointments;
+export default generateRandomAppointments

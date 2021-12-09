@@ -1,14 +1,14 @@
-import React from "react";
-import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React from "react"
+import "./App.css"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
-import Home from "./Home";
-import Calendar from "./Calendar";
-import Day from "./Day";
+import Home from "./Home"
+import Calendar from "./Calendar"
+import Day from "./Day"
 
-import generateRandomAppointments from "./utils";
+import generateRandomAppointments from "./utils"
 
-const appointments = generateRandomAppointments(150);
+const appointments = generateRandomAppointments(150)
 
 const App = () => (
   <Router>
@@ -41,5 +41,6 @@ const App = () => (
       </main>
     </div>
   </Router>
-);
-export default App;
+)
+
+export default App

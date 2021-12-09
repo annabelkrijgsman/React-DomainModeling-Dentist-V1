@@ -1,4 +1,4 @@
-import React from "react";
-import "./App.css";
+import React from "react"
+import "./App.css"
 
-export default () => <div>Home!</div>;
+export default () => <div>Home!</div>

@@ -1,6 +1,6 @@
-import React from "react";
-import "./Day.css";
-import AppointmentInDay from "./AppointmentInDay";
+import React from "react"
+import "./Day.css"
+import AppointmentInDay from "./AppointmentInDay"
 
 export default ({ appointments }) => {
   const appointmentsJSX = appointments.map(
@@ -13,6 +13,6 @@ export default ({ appointments }) => {
         key={index}
       />
     )
-  );
-  return <ul className="dayview">{appointmentsJSX}</ul>;
-};
+  )
+  return <ul className="dayview">{appointmentsJSX}</ul>
+}
