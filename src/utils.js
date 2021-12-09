@@ -2,7 +2,7 @@ const names = {
   dentists: [
     {
       id: 1,
-      firsName: "Barbe",
+      firstName: "Barbe",
       lastName: "Cobello",
       email: "bcobello0@dentistcompanybvt.com",
       phone: "+1 (649) 431-8631",
@@ -454,11 +454,20 @@ const names = {
   ]
 }
 
-const getRandomName = () => {
-  console.log(names)
-  const person = names[Math.floor(Math.random() * 250)];
-  return `${person.name} ${person.surname}`;
-};
+const getRandomClient = () => {
+  let person = names.clients[Math.floor(Math.random() * 50)]
+  return `${person.firstName} ${person.lastName}`
+}
+
+const getRandomDentist = () => {
+  let person = names.dentists[Math.floor(Math.random() * 4)]
+  return `${person.firstName} ${person.lastName}`
+}
+
+const getRandomAssistant = () => {
+  let person = names.assistants[Math.floor(Math.random() * 2)]
+  return `${person.firstName} ${person.lastName}`
+}
 
 const getRandomTime = () => {
   let hour;
@@ -470,14 +479,14 @@ const getRandomTime = () => {
   }
 };
 
-const getRandomDay = () => Math.floor(Math.random() * 28) + 1;
+const getRandomDay = () => Math.floor(Math.random() * 20) + 1;
 
 const generateRandomAppointment = () => ({
   day: getRandomDay(),
   time: getRandomTime(),
-  patient: getRandomName(),
-  dentist: getRandomName(),
-  assistant: getRandomName(),
+  patient: getRandomClient(),
+  dentist: getRandomDentist(),
+  assistant: getRandomAssistant(),
 });
 
 const generateRandomAppointments = num =>
