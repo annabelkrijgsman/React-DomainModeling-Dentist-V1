@@ -2,9 +2,9 @@ import React from "react"
 import "./App.css"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
-import Home from "./Home"
-import Calendar from "./Calendar"
-import Day from "./Day"
+import Home from "./Components/Home"
+import Calendar from "./Components/Calendar"
+import Day from "./Components/Day"
 
 import generateRandomAppointments from "./utils"
 

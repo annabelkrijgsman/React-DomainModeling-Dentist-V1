@@ -6,5 +6,6 @@ export default ({ appointments }) => {
     <AppointmentInMonth time={time} patient={patient} key={index} />
   ))
 
-  return <div className="day">{appointmentsJSX}</div>
+  const sortedAppointmentsJSX = appointmentsJSX.sort((a, b,) => a.props.time - b.props.time)
+  return <div className="day">{sortedAppointmentsJSX}</div>
 }

@@ -1,4 +1,5 @@
-import personData from "./data/PersonData"
+import personData from "./Data/PersonData"
+import { v4 as uuidv4 } from 'uuid'
 
 const getRandomClient = () => {
   let person = personData.clients[Math.floor(Math.random() * personData.clients.length)]
@@ -28,6 +29,7 @@ const getRandomTime = () => {
 const getRandomDay = () => Math.floor(Math.random() * 20) + 1
 
 const generateRandomAppointment = () => ({
+  id: uuidv4(),
   day: getRandomDay(),
   time: getRandomTime(),
   patient: getRandomClient(),

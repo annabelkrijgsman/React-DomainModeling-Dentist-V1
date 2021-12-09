@@ -1,5 +1,5 @@
 import React from "react"
-import "./Day.css"
+import "../style/Day.css"
 import AppointmentInDay from "./AppointmentInDay"
 
 export default ({ appointments }) => {
@@ -14,5 +14,6 @@ export default ({ appointments }) => {
       />
     )
   )
-  return <ul className="dayview">{appointmentsJSX}</ul>
+  const sortedAppointmentsJSX = appointmentsJSX.sort((a, b,) => a.props.time - b.props.time)
+  return <ul className="dayview">{sortedAppointmentsJSX}</ul>;
 }
