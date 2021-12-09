@@ -1,4 +1,4 @@
 import React from "react"
 import "../style/App.css"
 
-export default () => <div>Home!</div>
+export default () => <div>Welcome to the appointment planner of Tandartspraktijk B.V.T.</div>
