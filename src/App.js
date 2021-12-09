@@ -8,7 +8,7 @@ import Day from "./Day";
 
 import generateRandomAppointments from "./utils";
 
-const appointments = generateRandomAppointments(70);
+const appointments = generateRandomAppointments(150);
 
 const App = () => (
   <Router>
