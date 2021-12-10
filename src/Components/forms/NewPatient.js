@@ -18,7 +18,7 @@ const NewPatient = (props) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <h1>Sign up new patient</h1>
+            <h1>Add new patient</h1>
             <input type="text" name="firstname" placeholder="Enter firstname" required/>
             <input type="text" name="surname" placeholder="Enter lastname" required/>
             <input type="text" name="birthyear" placeholder="Enter birthyear" required/>

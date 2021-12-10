@@ -218,7 +218,7 @@ class NewAppointment extends Component {
                     {eligibleTimes}
                 </select>
 
-                <input className="submit" type="submit" value="Add new appointment" />
+                <input className="submit" type="submit" value="Add appointment" />
             </form>
         )
     }
