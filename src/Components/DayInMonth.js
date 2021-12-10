@@ -1,11 +1,23 @@
-import React from "react"
-import AppointmentInMonth from "./AppointmentInMonth"
+import React from 'react'
+import AppointmentInMonth from './AppointmentInMonth'
 
-export default ({ appointments }) => {
-  const appointmentsJSX = appointments.map(({ time, patient }, index) => (
-    <AppointmentInMonth time={time} patient={patient} key={index} />
+export default ({ appointments, removeAppointment, editAppointment }) => {
+  appointments.sort((a, b) => {
+    return a.time - b.time
+  })
+
+  const appointmentsJSX = appointments.map(({ time, patient, dentist, assistant, id }, index) => (
+    <AppointmentInMonth 
+      time={time} 
+      patient={patient} 
+      dentist={dentist}
+      assistant={assistant}
+      key={index} 
+      removeAppointment={removeAppointment}
+      id={id}
+      editAppointment={editAppointment}
+    />
   ))
 
-  const sortedAppointmentsJSX = appointmentsJSX.sort((a, b,) => a.props.time - b.props.time)
-  return <div className="day">{sortedAppointmentsJSX}</div>
+  return <div className="day">{appointmentsJSX}</div>
 }

@@ -4,8 +4,8 @@
 }
 
 body {
-  margin: 4rem;
-  background-color: lightslategray;
+  margin: 1rem;
+  background-color: #fff;
 }
 
 nav li {
@@ -15,8 +15,9 @@ nav li {
 }
 
 nav {
-  margin-bottom: 4rem;
   font-size: 2rem;
+  margin: 50px;
+  margin-bottom: 20px;
 }
 
 nav a {
@@ -24,12 +25,12 @@ nav a {
 }
 
 nav a:hover {
-  color: greenyellow;
+  color: lightpink;
 }
 
 a,
 a:focus,
 a:visited {
-  color: darksalmon;
+  color: lightcoral;
   outline: none;
 }
