@@ -12,7 +12,7 @@ const NewPatient = (props) => {
             email: event.target.email.value,
             phone: event.target.phone.value,
         }
-        props.newPatient(patient)
+        props.addNewPatient(patient)
         event.target.reset()
     }
 
